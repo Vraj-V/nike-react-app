@@ -24,7 +24,7 @@ const Sign_Up = () => {
   users.push(newUser);
 
   localStorage.setItem('users',JSON.stringify(users));
-  navigate('/')
+  navigate('/login')
   console.log("user saved :", users);
   }
     return (
