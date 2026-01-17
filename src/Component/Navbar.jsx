@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link,useNavigate } from 'react-router-dom'
+import nikeLogo from "../assets/nike.png";
+
 // import { useEffect,useState } from 'react'
 const Navbar = () => {
   // const [IsLoggedIn,setIsLoggedIn] = useState(false);
@@ -19,7 +21,7 @@ const Navbar = () => {
         
       <nav className='container'>
         <div className='logo'>
-          <img className='brand-logo' src="https://th.bing.com/th/id/R.7ecb22fd61fcaf57bf8b9a17b0098a63?rik=RbiQQpEI1GiB9Q&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f4%2fNike-Logo-Transparent-Background.png&ehk=lWceA5o3dIB7BLwMnH9dZxYB1wbB40OxRA9QciQ%2fQc4%3d&risl=&pid=ImgRaw&r=0" alt="Brand" />
+          <img className='brand-logo' src={nikeLogo} alt="Brand" />
           </div>
 
           <ul className="menu">
