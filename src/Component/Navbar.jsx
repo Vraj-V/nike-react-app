@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect ,useState} from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import nikeLogo from "../assets/nike.png";
 
@@ -6,16 +6,23 @@ import nikeLogo from "../assets/nike.png";
 const Navbar = () => {
   // const [IsLoggedIn,setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  const [User, setUser] = useState(null)
 
-  let isLoggedIn =false
-  if(localStorage.getItem('loginUser')){
-    isLoggedIn =true;
+  
+  useEffect(()=>{
+  const loginUser = localStorage.getItem('loginUser')
+  if(loginUser){
+    setUser(JSON.parse(loginUser));
   }
+  },[])
+
 
   const loginOut =()=>{
     localStorage.removeItem('loginUser')
+    setUser(null);
     navigate('/login')
   }
+
   return (
     <div>
         
@@ -32,7 +39,7 @@ const Navbar = () => {
 </ul>
 
     {/* Rendering Logic */}
-    {!isLoggedIn ? (
+    {!User ? (
       <Link to='/login'>
                 <button className='btn-login'>Login</button>
 </Link>):(

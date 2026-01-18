@@ -443,3 +443,25 @@ section h2{
   
 }
 
+.shop-search-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.shop-search{
+  width: 80%;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 30px;
+  font-size: 18px;
+  border: 1px solid gray;
+
+  
+}
+.btn-search{
+  background-color:#ffffff;
+  border: 2px solid gray;
+  margin: 10px 0px;
+  border-radius: 30px;
+}

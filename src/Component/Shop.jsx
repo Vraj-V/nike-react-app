@@ -1,8 +1,8 @@
-import React from 'react'
+import React,{useState} from 'react'
 import ShopCard from './ShopCard';
 
 const Shop = () => {
-
+const [search, setSearch] = useState('')
     const shoes = [
   {
     id: 1,
@@ -89,14 +89,23 @@ const Shop = () => {
     image: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&auto=format"
   }
 ];
-
+const filterSearch = shoes.filter((shoe)=>{
+  return shoe.name.toLowerCase().includes(search.toLowerCase());
+});
 
 
   return (
     <div className='container margin Shoe '> 
-        <h3 >Shop</h3>
+
+      <div className='shop-search-container'>
+        <h1 className='shop-heading'>Shop</h1>
+        <input type="text" placeholder='search' className='shop-search' value={search} 
+        onChange={(e)=>{
+          setSearch(e.target.value)
+        }}/>
+      </div>
         <div className='shoe-shop'>
-        {shoes.map((shoe) => (
+        {filterSearch.map((shoe) => (
             <div key={shoe.id} className='shop'>
                 <ShopCard name ={shoe.name} price={shoe.price} discountPrice={shoe.discountPrice} image={shoe.image}  />
             </div>
