@@ -2,7 +2,11 @@ import React,{useState} from 'react'
 import ShopCard from './ShopCard';
 
 const Shop = () => {
-const [search, setSearch] = useState('')
+const [search, setSearch] = useState('');
+const [currentPage, setCurrentPage] = useState(1);
+const itemsperPage =9;
+
+
     const shoes = [
   {
     id: 1,
@@ -89,9 +93,50 @@ const [search, setSearch] = useState('')
     image: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&auto=format"
   }
 ];
+
+// Search - Bar filter
 const filterSearch = shoes.filter((shoe)=>{
   return shoe.name.toLowerCase().includes(search.toLowerCase());
 });
+
+// calculate total page need
+const totalPages = Math.ceil(filterSearch.length / itemsperPage);  //Math.ceil = roundUp  If 12 items  12/6 = 2total pages.
+
+// calculate the index range for current page.
+const indexOfLastItem = currentPage * itemsperPage;
+
+// calculate the index range for item to display on page.
+const indexOfFirstItem = indexOfLastItem -itemsperPage;
+
+// get items for current page only
+const currentItems = filterSearch.slice(indexOfFirstItem , 
+    indexOfLastItem);
+
+
+// Go to next Page.
+const nextPage = ()=>{
+  if(currentPage < totalPages){
+    setCurrentPage(currentPage + 1);
+  }
+
+}
+const prevPage = ()=>{
+  if(currentPage > 1){
+    setCurrentPage(currentPage -1);
+  }
+}
+
+// Go to specific page
+const goTopage =(pageNumber)=>{
+  setCurrentPage(pageNumber);
+}
+
+
+// handle the input search and reset to page 1 if user on different page.
+const handleSearch =(e)=>{
+  setSearch(e.target.value);
+  setCurrentPage(1);
+}
 
 
   return (
@@ -99,20 +144,64 @@ const filterSearch = shoes.filter((shoe)=>{
 
       <div className='shop-search-container'>
         <h1 className='shop-heading'>Shop</h1>
-        <input type="text" placeholder='search' className='shop-search' value={search} 
-        onChange={(e)=>{
-          setSearch(e.target.value)
-        }}/>
+        
+        <input 
+        type="text" 
+        placeholder='search' 
+        className='shop-search' 
+        value={search} 
+        onChange={handleSearch}
+        />
+
       </div>
+
+
         <div className='shoe-shop'>
-        {filterSearch.map((shoe) => (
+        {currentItems.map((shoe) => (
             <div key={shoe.id} className='shop'>
-                <ShopCard name ={shoe.name} price={shoe.price} discountPrice={shoe.discountPrice} image={shoe.image}  />
+                <ShopCard
+                id={shoe}
+                name ={shoe.name}
+                price={shoe.price}
+                discountPrice={shoe.discountPrice}
+                image={shoe.image}
+                />
             </div>
         ))}
         </div>
-    </div>
-  )
+
+        {/* Pagination control */}
+
+        {filterSearch.length > 0 &&(
+        <div className='pagination'>
+            
+            <button
+            onClick={prevPage}
+            className='pagination-prev'
+            disabled = {currentPage === 1}
+            >
+                Previous
+            </button>
+
+            <span className='pagination-info'>
+            Page {currentPage} of {totalPages}
+            </span>
+
+            <button
+            onClick={nextPage}
+            className='pagination-next'
+            disabled ={currentPage === totalPages}
+            > Next Page 
+            </button>
+            </div>
+            )}
+
+
+            {filterSearch.length === 0 && (
+                <h3>No shoes Found matching.</h3>
+            )}
+        </div>
+    )
 }
 
 export default Shop

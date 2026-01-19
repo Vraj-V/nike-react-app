@@ -2,7 +2,7 @@ import React,{useEffect ,useState} from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import nikeLogo from "../assets/nike.png";
 
-// import { useEffect,useState } from 'react'
+// import { useEffect,useState } from 'React '
 const Navbar = () => {
   // const [IsLoggedIn,setIsLoggedIn] = useState(false);
   const navigate = useNavigate();

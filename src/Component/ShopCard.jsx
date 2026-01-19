@@ -1,4 +1,5 @@
 import React from 'react'
+import Cart from './Cart'
 
 const ShopCard = (props) => {
   return (
@@ -11,6 +12,9 @@ const ShopCard = (props) => {
            <h2>{props.name}</h2>
             <p className='price'>Price: <span>{props.price}</span></p>
             <p className='discount'>Discount Price: <span>{props.discountPrice}</span> </p>
+        </div>
+        <div className='cart'>
+      <Cart value={props.id} />
         </div>
         </div>
     </div>
