@@ -179,14 +179,14 @@ const handleSearch =(e)=>{
 
 
         <div className='shoe-shop'>
-        {currentItems.map((shoe) => (
-            <div key={shoe.id} className='shop'>
+        {currentItems.map((item) => (
+            <div key={item.id} className='shop'>
                 <ShopCard
-                id={shoe}
-                name ={shoe.name}
-                price={shoe.price}
-                discountPrice={shoe.discountPrice}
-                image={shoe.image}
+                id={item}
+                name ={item.name}
+                price={item.price}
+                discountPrice={item.discountPrice}
+                image={item.image}
                 />
             </div>
         ))}
