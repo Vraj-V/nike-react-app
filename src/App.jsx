@@ -12,6 +12,7 @@ import Login from './Component/Login'
 import Sign from './Component/Sign'
 import Shop from './Component/Shop'
 import Catergoies from './Component/Catergoies'
+import MyCartPage from './Component/MyCartPage'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/sign' element={<Sign />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/categories' element={<Catergoies />} />
+        <Route path='/myCart' element={<MyCartPage />} />
         
         <Route path='*' element={<Not404 />} />
         </Routes>

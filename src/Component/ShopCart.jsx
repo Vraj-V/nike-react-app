@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Cart = (props) => {
+const ShopCart = (props) => {
 
     const addToCart = ()=>{
         // console.log(props.id);
@@ -18,10 +18,10 @@ const Cart = (props) => {
     <div>
             <button className='btn-cart'
             onClick={addToCart}
-            >🛒  Add to card</button>
+            >🛒  Add to cart</button>
 
     </div>
   )
 }
 
-export default Cart
+export default ShopCart

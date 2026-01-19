@@ -10,10 +10,21 @@ const Navbar = () => {
 
   
   useEffect(()=>{
-  const loginUser = localStorage.getItem('loginUser')
+    const checkUser =() =>{
+        const loginUser = localStorage.getItem('loginUser')
   if(loginUser){
     setUser(JSON.parse(loginUser));
+  }else{
+    setUser(null);
   }
+    }
+
+    checkUser()
+    window.addEventListener('storage',checkUser);
+
+    return ()=>{
+      window.removeEventListener('storage',checkUser)
+    }
   },[])
 
 
@@ -33,19 +44,33 @@ const Navbar = () => {
 
           <ul className="menu">
   <li><Link to="/">HOME</Link></li>
+  <li><Link to="/shop">SHOP</Link></li>
   <li><Link to="/location">LOCATION</Link></li>
   <li><Link to="/about">ABOUT US</Link></li>
   <li><Link to="/contact">CONTACT</Link></li>
 </ul>
 
-    {/* Rendering Logic */}
-    {!User ? (
-      <Link to='/login'>
-                <button className='btn-login'>Login</button>
-</Link>):(
-          <button className='btn-out' onClick={loginOut}>Log-Out</button>
-)}
 
+
+    <div className='userLogged'>
+  
+  {/* adding my cart */}
+            {!User? null :(
+              <div>
+                  <Link to='/myCart'>
+                  <button className='myCart'>🛒 MyCart</button>
+                  </Link>
+              </div>
+            )}
+
+                {/* Rendering Logic */}
+              {!User ? (
+                <Link to='/login'>
+                          <button className='btn-login'>Login</button>
+          </Link>):(
+                    <button className='btn-out' onClick={loginOut}>Log-Out</button>
+          )}
+          </div>
       </nav>
     </div>
   )

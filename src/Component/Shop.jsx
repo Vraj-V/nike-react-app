@@ -20,77 +20,99 @@ const itemsperPage =9;
     name: "Nike Revolution 6",
     price: 4999,
     discountPrice: 3799,
-    image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&auto=format"
+    image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&auto=format",
+      qty: 1
+
   },
   {
     id: 3,
     name: "Nike Air Max 90",
     price: 10999,
     discountPrice: 8499,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format"
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format",
+      qty: 1
+
   },
   {
     id: 4,
     name: "Nike Air Force 1",
     price: 9999,
     discountPrice: 7999,
-    image: "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=600&auto=format"
+    image: "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=600&auto=format",
+      qty: 1
+
   },
   {
     id: 5,
     name: "Nike Blazer Mid",
     price: 8599,
     discountPrice: 6499,
-    image: "https://converse.static.n7.io/media/catalog/product/5/6/563512c_01.jpg"
+    image: "https://converse.static.n7.io/media/catalog/product/5/6/563512c_01.jpg",
+      qty: 1
+
   },
   {
     id: 6,
     name: "Nike React Infinity Run",
     price: 12999,
     discountPrice: 9999,
-    image: "https://converse.static.n7.io/media/catalog/product/a/1/a10548c_a_107x1.jpg"
+    image: "https://converse.static.n7.io/media/catalog/product/a/1/a10548c_a_107x1.jpg",
+      qty: 1
+
   },
   {
     id: 7,
     name: "Nike Downshifter 12",
     price: 4299,
     discountPrice: 3299,
-    image: "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=600&auto=format"
+    image: "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=600&auto=format",
+      qty: 1
+
   },
   {
     id: 8,
     name: "Nike Court Vision Low",
     price: 5599,
     discountPrice: 4199,
-    image: "https://converse.static.n7.io/media/catalog/product/5/6/563509c_a_107x1.jpg"
+    image: "https://converse.static.n7.io/media/catalog/product/5/6/563509c_a_107x1.jpg",
+      qty: 1
+
   },
   {
     id: 9,
     name: "Nike Flex Experience",
     price: 4899,
     discountPrice: 3699,
-    image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&auto=format"
+    image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&auto=format",
+      qty: 1
+
   },
   {
     id: 10,
     name: "Nike Air Max Excee",
     price: 9499,
     discountPrice: 7299,
-    image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&auto=format"
+    image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&auto=format",
+      qty: 1
+
   },
   {
     id: 11,
     name: "Nike Zoom Fly 5",
     price: 13999,
     discountPrice: 10999,
-    image: "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=600&auto=format"
+    image: "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=600&auto=format",
+      qty: 1
+
   },
   {
     id: 12,
     name: "Nike SB Chron 2",
     price: 5999,
     discountPrice: 4599,
-    image: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&auto=format"
+    image: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&auto=format",
+      qty: 1
+
   }
 ];
 

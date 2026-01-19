@@ -42,6 +42,12 @@ button{
   transition: all .3s ease;
 }
 
+.between{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
 button:hover{
   border-radius: 20px;
   background-color: white;
@@ -92,6 +98,21 @@ nav{
   width: 104%;
   background-color: rgb(230, 25, 25);
  } */
+.user-info{
+  display: flex;
+  gap: 10px;
+}
+
+.userLogged{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.myCart{
+  background-color: #ffffff;
+  color: var(--red);
+  border: 2px solid red;
+}
 
  .hero{
   display: flex;
@@ -111,6 +132,7 @@ nav{
   text-decoration: none;   /*remove underline */
   color: #000;             /* default color */
   font-weight: 500;
+  font-size: 16px;
   position: relative;
   padding: 4px 0;
   transition: color 0.3s ease;
@@ -524,4 +546,98 @@ section h2{
 }
 .pagination button:active{
   scale: 1.2;
+}
+
+/* Mycart Page */
+
+.product-items{
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px var(--gray);
+  margin-bottom: 30px;
+  padding: 20px;
+  display: flex;
+  gap: 24px;
+}
+
+/* IMAGE */
+.product-img{
+  width: 30%;
+  border-right: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img img{
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+/* DETAILS */
+.product-details{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* TOP ROW */
+.order-seq{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-seq p{
+  font-weight: 600;
+}
+
+/* DESCRIPTION */
+.product-detail{
+  margin: 12px 0;
+  line-height: 1.5;
+  color: #6c6c6c;
+  font-size: 16px;
+  text-align: left;
+}
+.more{
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+/* PRICE */
+.product-price{
+  text-align: right;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.o-price{
+  margin-top: 30px;
+  font-size: 15px;
+}
+.original-price{
+  color:#6c6c6c ;
+  text-decoration: 3px line-through red;
+}
+
+/* DELETE */
+.delete-product{
+  background: #d01c28;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.total-price{
+  font-size: 21px;
+  font: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--red);
 }
