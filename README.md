@@ -1,16 +1,59 @@
-# React + Vite
+🛒 Nike Store – React Cart Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Nike e-commerce frontend built with React that allows users to browse products, add items to a cart, and see real-time cart updates using localStorage.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧾 Product listing with price & discount price
 
-## React Compiler
+🛒 Add to Cart functionality
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔁 Prevents duplicate items in cart
 
-## Expanding the ESLint configuration
+📦 Cart data stored in localStorage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔢 Dynamic cart count in Navbar
+
+✅ Button text changes to “Added” after adding item
+
+🎨 Clean & modern UI
+
+❌ Empty cart handling (“Nothing in Cart”)
+
+🧠 Concepts Used
+
+React Hooks
+
+useState – UI updates (button text, cart count)
+
+useEffect – sync UI with localStorage on load
+
+localStorage
+
+Persistent cart data across pages & refresh
+
+Conditional Rendering
+
+Empty cart vs cart summary
+
+Button text change (Add → Added)
+
+Reusable Components
+
+Product Card
+
+Navbar
+
+Basic CSS Styling
+
+🛠 Tech Stack
+
+React (Vite)
+
+JavaScript (ES6+)
+
+HTML5
+
+CSS3
+
+localStorage (Browser API)

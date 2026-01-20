@@ -12,6 +12,16 @@ const ShopCart = (props) => {
 
         // console.log(localStorage);
         console.log(cart);
+
+        window.addEventListener('storage',()=>{
+            window.location.reload();
+        })
+
+        return (()=>{
+            window.removeEventListener('storage',()=>{
+                window.location.reload();
+            })
+        })
     }
 
   return (

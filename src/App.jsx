@@ -6,7 +6,6 @@ import Contact from './Component/Contact'
 import Location from './Component/Location'
 import { Routes, Route } from 'react-router-dom'
 import About from './Component/About'
-import Footer from './Component/Footer'
 import Not404 from './Component/Not404'
 import Login from './Component/Login'
 import Sign from './Component/Sign'
@@ -31,7 +30,6 @@ const App = () => {
         
         <Route path='*' element={<Not404 />} />
         </Routes>
-    {/* <Footer /> */}
         </div>
   )
 }
