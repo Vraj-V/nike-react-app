@@ -2,11 +2,11 @@ import React,{useEffect ,useState} from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import nikeLogo from "../assets/nike.png";
 
-// import { useEffect,useState } from 'React '
 const Navbar = () => {
   // const [IsLoggedIn,setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
   const [User, setUser] = useState(null)
+  const [count, setCount] = useState(0)
 
   
   useEffect(()=>{
@@ -34,6 +34,22 @@ const Navbar = () => {
     navigate('/login')
   }
 
+
+  useEffect(()=>{
+
+    const updateCart = () =>{
+      const totalItems = JSON.parse(localStorage.getItem('carts'))|| []
+      setCount(totalItems.length);
+    }
+
+    updateCart() //initial loaded
+
+    window.addEventListener('storage',updateCart);
+
+    return () => window.removeEventListener('storage',updateCart);
+  },[count])
+  
+
   return (
     <div>
         
@@ -58,7 +74,7 @@ const Navbar = () => {
             {!User? null :(
               <div>
                   <Link to='/myCart'>
-                  <button className='myCart'>🛒 MyCart</button>
+                  <button className='myCart'>🛒 MyCart  <span className='cart-count'>{count}</span></button>
                   </Link>
               </div>
             )}

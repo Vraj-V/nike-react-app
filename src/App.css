@@ -641,3 +641,25 @@ section h2{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: var(--red);
 }
+
+.cart-count{
+  margin-left: 5px;
+  padding: 3px 5px;
+  border-radius: 50%;
+  font-weight: 900;
+  border: 1px solid white;
+  background-color: var(--red);
+  color: white;
+}
+
+.noItems{
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  color: #6c6c6c;
+  font-size: large;
+  text-decoration: underline;
+
+}

@@ -49,7 +49,7 @@ const updateQty = (index, newQty) => {
 
                 <div className='order-detail'>
 
-                <select className='more' 
+                <select className='more'
                     value={items.qty}
                     onChange={(e) => updateQty(index, e.target.value)}
                 >
@@ -72,10 +72,16 @@ const updateQty = (index, newQty) => {
            )
         })}
         </div>
-            <div className='between'>
+            {myCart.length === 0 ? (
+                <div className='noItems'>
+                    <h1>Nothing on Cart</h1>
+                </div>
+            ):(
+                <div className='between'>
                 <h2>Total: </h2>
                 <p className='total-price'> -- {totalPice}</p>
             </div>
+            )}
         </div>
     </div>
   )
