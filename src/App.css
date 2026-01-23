@@ -663,3 +663,23 @@ section h2{
   text-decoration: underline;
 
 }
+.order_btn{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 10px;
+}
+.order_btn button{
+  padding: 10px 20px;
+  background-color: var(--red);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.order_btn button:hover{
+  background-color: #d01c28;
+}

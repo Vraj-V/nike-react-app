@@ -82,6 +82,9 @@ const updateQty = (index, newQty) => {
                 <p className='total-price'> -- {totalPice}</p>
             </div>
             )}
+            <div className='order_btn'>
+            <button > Order Now...</button>
+            </div>
         </div>
     </div>
   )
